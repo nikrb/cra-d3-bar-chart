@@ -4,8 +4,6 @@ import d3 from 'd3';
 
 export default class BarChart extends React.Component {
   render = () => {
-    console.log( "render BarChart");
-
     var yScale = d3.scale.linear()
       .domain([0, d3.max(this.props.data)])
       .range([0, this.props.height]);
