@@ -16,6 +16,9 @@ class App extends Component {
   };
 
   render() {
+    const barPoints = this.state.data.map( function( ele){
+      return ele.total;
+    });
     return (
       <div className="App">
         <div className="App-header">
@@ -26,7 +29,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <div>
-          <BarChart data={[ 30, 10, 5, 8, 15, 10 ]} width="600" height="400" />
+          <BarChart data={barPoints} width="600" height="400" />
         </div>
       </div>
     );
